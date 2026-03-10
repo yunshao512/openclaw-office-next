@@ -3,7 +3,7 @@
 ## 目录结构
 
 ```
-openclaw-office-next/   openclaw 办公套件 Next 版/
+openclaw-office-next/   openclaw 办公套件 Next 版/openclaw-office-next/ OpenClaw Office Suite Next Edition/openclaw-office-next/ OpenClaw Office Suite Next Edition/
 ├── bin/                 # 服务管理脚本
 │   ├── start.sh        # 启动服务│   ├── start.sh        # Start the service
 │   ├── stop.sh         # 停止服务│   ├── stop.sh         # Stop the service
@@ -11,20 +11,21 @@ openclaw-office-next/   openclaw 办公套件 Next 版/
 ├── conf/                # 配置文件
 │   └── config.json      # 主配置文件│   └── config.json      # Main configuration file
 ├── logs/                # 日志目录
-│   ├── server.log       # 图片服务器日志│   ├── server.log       # Log file of the image server
-│   └── frontend.log     # 前端服务日志│   └── frontend.log     # Frontend service log
-├── public/              # 静态资源├── public/              # Static resources
-│   ├── agents/          # Agent 自定义图片│   ├── agents/          # Custom images for Agents
+│   ├── server.log       # 图片服务器日志│   ├── server.log       # Log file of the image server│   ├── server.log       # Log file of the image server
+│   └── frontend.log     # 前端服务日志│   └── frontend.log     # Frontend service log│   └── frontend.log     # Frontend service log
+├── public/              # 静态资源├── public/              # Static resources├── public/              # Static resources
+│   ├── agents/          # Agent 自定义图片│   ├── agents/          # Custom images for Agents│   ├── agents/          # 代理自定义图片│   ├── agents/          # 代理的自定义图片
 │   │   └── {agentId}/
-│   │       ├── face.jpg      # 自定义头像│   │       ├── face.jpg      # Custom avatar
-│   │       └── fullbody.jpg  # 自定义全身照│   │       └── fullbody.jpg  # Custom full-body photo
-│   ├── avatars/         # 默认头像库│   ├── avatars/         # Default avatar library
+│   │       ├── face.jpg      # 自定义头像│   │       ├── face.jpg      # Custom avatar│   │       ├── face.jpg      # Custom avatar
+│   │       └── fullbody.jpg  # 自定义全身照│   │       └── fullbody.jpg  # Custom full-body photo│   │       └── fullbody.jpg  # Custom full-body photo
+│   ├── avatars/         # 默认头像库│   ├── avatars/         # Default avatar library│   ├── avatars/         # Default avatar library
 │   └── config.json      # 前端配置（从 conf/ 复制）│   └── config.json      # Front-end configuration (copied from conf/)
 └── src/                # 源代码
 ```
 
 ## 效果展示
-<img width   宽度="2860" height="1504" alt="182ba369-eb94-4667-93ff-dbed678a7ee9" src="https://github.com/user-attachments/assets/e2d6f370-3d19-497d-8342-01b9aef181db" /><img width   宽度="2860" height="1504" alt="182ba369-eb94-4667-93ff-dbed678a7ee9" src="https://github.com/user-attachments/assets/e2d6f370-3d19-497d-8342-01b9aef181db" /><img width   宽度="2860" height="1504" alt="182ba369-eb94-4667-93ff-dbed678a7ee9" src="https://github.com/user-attachments/assets/e2d6f370-3d19-497d-8342-01b9aef181db" /><img width   宽度="2860" height="1504" alt="182ba369-eb94-4667-93ff-dbed678a7ee9" src="https://github.com/user-attachments/assets/e2d6f370-3d19-497d-8342-01b9aef181db" />
+<img width   宽度="2860" height="1504" alt="dbc6a17c695ff6596ef1b06e4671b3fe" src="https://github.com/user-attachments/assets/14e6fb34-66bb-46ac-bae1-4b0b7ca54c98" />
+
 
 
 
@@ -32,23 +33,23 @@ openclaw-office-next/   openclaw 办公套件 Next 版/
 
 ### 1. 启动服务
 
-```bash   ”“bash
+```bash   ”“bash   “bash”;“bash
 ./bin/start.sh   / bin / start.sh
 ```
 
 服务将在以下端口启动：
-- 前端服务：http://localhost:8088
-- 图片服务：http://localhost:3001
+- 前端服务：http://localhost:8088Front-end service: http://localhost:8088
+- 图片服务：http://localhost:3001- Image service: http://localhost:3001
 
 ### 2. 停止服务
 
-```bash   ”“bash
+```bash   ”“bash   “bash”;“bash
 ./bin/stop.sh   / bin / stop.sh
 ```
 
 ### 3. 重启服务
 
-```bash   ”“bash
+```bash   ”“bash   “bash”;“bash
 ./bin/restart.sh   / bin / restart.sh
 ```
 
