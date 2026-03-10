@@ -1,34 +1,39 @@
-# OpenClaw Office Next - 使用指南
+# OpenClaw Office Next - 使用指南OpenClaw Office Next - User Guide
 
 ## 目录结构
 
 ```
-openclaw-office-next/
+openclaw-office-next/   openclaw 办公套件 Next 版/
 ├── bin/                 # 服务管理脚本
-│   ├── start.sh        # 启动服务
-│   ├── stop.sh         # 停止服务
-│   └── restart.sh       # 重启服务
+│   ├── start.sh        # 启动服务│   ├── start.sh        # Start the service
+│   ├── stop.sh         # 停止服务│   ├── stop.sh         # Stop the service
+│   └── restart.sh       # 重启服务│   └── restart.sh       # Restart the service
 ├── conf/                # 配置文件
-│   └── config.json      # 主配置文件
+│   └── config.json      # 主配置文件│   └── config.json      # Main configuration file
 ├── logs/                # 日志目录
-│   ├── server.log       # 图片服务器日志
-│   └── frontend.log     # 前端服务日志
-├── public/              # 静态资源
-│   ├── agents/          # Agent 自定义图片
+│   ├── server.log       # 图片服务器日志│   ├── server.log       # Log file of the image server
+│   └── frontend.log     # 前端服务日志│   └── frontend.log     # Frontend service log
+├── public/              # 静态资源├── public/              # Static resources
+│   ├── agents/          # Agent 自定义图片│   ├── agents/          # Custom images for Agents
 │   │   └── {agentId}/
-│   │       ├── face.jpg      # 自定义头像
-│   │       └── fullbody.jpg  # 自定义全身照
-│   ├── avatars/         # 默认头像库
-│   └── config.json      # 前端配置（从 conf/ 复制）
+│   │       ├── face.jpg      # 自定义头像│   │       ├── face.jpg      # Custom avatar
+│   │       └── fullbody.jpg  # 自定义全身照│   │       └── fullbody.jpg  # Custom full-body photo
+│   ├── avatars/         # 默认头像库│   ├── avatars/         # Default avatar library
+│   └── config.json      # 前端配置（从 conf/ 复制）│   └── config.json      # Front-end configuration (copied from conf/)
 └── src/                # 源代码
 ```
+
+## 效果展示
+<img width   宽度="2860" height="1504" alt="182ba369-eb94-4667-93ff-dbed678a7ee9" src="https://github.com/user-attachments/assets/e2d6f370-3d19-497d-8342-01b9aef181db" /><img width   宽度="2860" height="1504" alt="182ba369-eb94-4667-93ff-dbed678a7ee9" src="https://github.com/user-attachments/assets/e2d6f370-3d19-497d-8342-01b9aef181db" /><img width   宽度="2860" height="1504" alt="182ba369-eb94-4667-93ff-dbed678a7ee9" src="https://github.com/user-attachments/assets/e2d6f370-3d19-497d-8342-01b9aef181db" /><img width   宽度="2860" height="1504" alt="182ba369-eb94-4667-93ff-dbed678a7ee9" src="https://github.com/user-attachments/assets/e2d6f370-3d19-497d-8342-01b9aef181db" />
+
+
 
 ## 快速开始
 
 ### 1. 启动服务
 
-```bash
-./bin/start.sh
+```bash   ”“bash
+./bin/start.sh   / bin / start.sh
 ```
 
 服务将在以下端口启动：
@@ -37,45 +42,47 @@ openclaw-office-next/
 
 ### 2. 停止服务
 
-```bash
-./bin/stop.sh
+```bash   ”“bash
+./bin/stop.sh   / bin / stop.sh
 ```
 
 ### 3. 重启服务
 
-```bash
-./bin/restart.sh
+```bash   ”“bash
+./bin/restart.sh   / bin / restart.sh
 ```
 
 ## 配置说明
 
-### 配置文件 (conf/config.json)
+### 配置文件 (conf/config.json)Configuration File (conf/config.json)
 
 所有端口和服务配置都集中在 `conf/config.json` 文件中：
 
-```json
+```json   ' ' ' json```json
+   ' ' '
+```
 {
-  "server": {
+  "server": {   "server": {
     "port": 3001,           // 图片服务器端口
-    "host": "localhost"     // 图片服务器主机
+    "host": "localhost"     // 图片服务器主机" host" : " localhost"     // Image server host
   },
-  "frontend": {
+  "frontend": {   "frontend": {
     "port": 8088,           // 前端端口
     "host": "0.0.0.0"       // 前端主机 (0.0.0.0 表示允许外部访问)
   },
-  "openclaw": {
-    "gatewayUrl": "http://127.0.0.1:8089",  // OpenClaw Gateway 地址
-    "pollInterval": 3000,   // 数据刷新间隔（毫秒）
-    "reconnectInterval": 5000,
-    "logDir": "/tmp/openclaw",
-    "logPollInterval": 600000
+  "openclaw": {   "openclaw": {
+    "gatewayUrl": "http://127.0.0.1:8089",  // OpenClaw Gateway 地址"网关地址"： "http://127.0.0.1:8089"，  // OpenClaw 网关地址
+    "pollInterval": 3000,   // 数据刷新间隔（毫秒）" pollInterval" 3000, // Data refresh interval (milliseconds)
+    "reconnectInterval": 5000,"reconnectInterval": 5000,
+    "logDir": "/tmp/openclaw","logDir": "/tmp/openclaw",
+    "logPollInterval": 600000"logPollInterval": 600000
   },
-  "logging": {
-    "level": "info",        // 日志级别
-    "dir": "./logs"         // 日志目录
+  "logging": {   "logging": {
+    "level": "info",        // 日志级别" level" : " info" // Log level
+    "dir": "./logs"         // 日志目录" dir" : " ./logs"         // Log directory
   },
-  "storage": {
-    "agentsDir": "./public/agents",    // Agent 图片存储目录
+  "storage": {   "storage": {
+    "agentsDir": "./public/agents",    // Agent 图片存储目录" agentsDir" : " ./public/agents" // Directory for storing Agent images
     "avatarsDir": "./public/avatars"   // 默认头像目录
   }
 }
@@ -102,7 +109,7 @@ openclaw-office-next/
 
 **注意**：修改端口后需要确保新端口未被占用：
 
-```bash
+```bash   ”“bash
 # 检查端口占用
 lsof -i :8088
 lsof -i :3001
