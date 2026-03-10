@@ -15,8 +15,8 @@ openclaw-office-next/   openclaw 办公套件 Next 版/openclaw-office-next/ Ope
 │   └── frontend.log     # 前端服务日志│   └── frontend.log     # Frontend service log│   └── frontend.log     # Frontend service log
 ├── public/              # 静态资源├── public/              # Static resources├── public/              # Static resources
 │   ├── agents/          # Agent 自定义图片│   ├── agents/          # Custom images for Agents│   ├── agents/          # 代理自定义图片│   ├── agents/          # 代理的自定义图片
-│   │   └── {agentId}/
-│   │       ├── face.jpg      # 自定义头像│   │       ├── face.jpg      # Custom avatar│   │       ├── face.jpg      # Custom avatar
+│   │   └── {agentId}/│└
+│   │       ├── face.jpg      # 自定义头像│   │       ├── face.jpg      # Custom avatar│   │       ├── face.jpg      # Custom avatar││├──face.jpg #自定义头像││├──face.jpg #葬礼而化身││├──face.jpg #葬礼而化身。
 │   │       └── fullbody.jpg  # 自定义全身照│   │       └── fullbody.jpg  # Custom full-body photo│   │       └── fullbody.jpg  # Custom full-body photo
 │   ├── avatars/         # 默认头像库│   ├── avatars/         # Default avatar library│   ├── avatars/         # Default avatar library
 │   └── config.json      # 前端配置（从 conf/ 复制）│   └── config.json      # Front-end configuration (copied from conf/)
@@ -33,17 +33,17 @@ openclaw-office-next/   openclaw 办公套件 Next 版/openclaw-office-next/ Ope
 
 ### 1. 启动服务
 
-```bash   ”“bash   “bash”;“bash
+```bash   ”“bash   “bash”;“bashBash ”&ldquo```bash   ”“bash   “bash”;“bash
 ./bin/start.sh   / bin / start.sh
 ```
 
 服务将在以下端口启动：
-- 前端服务：http://localhost:8088Front-end service: http://localhost:8088
-- 图片服务：http://localhost:3001- Image service: http://localhost:3001
+- 前端服务：http://localhost:8088Front-end service: http://localhost:8088—服务：http://localhost:8088—服务：http://localhost:8088
+- 图片服务：http://localhost:3001- Image service: http://localhost:3001-图片服务：http://localhost:3001
 
 ### 2. 停止服务
 
-```bash   ”“bash   “bash”;“bash
+```bash   ”“bash   “bash”;“bash```bash   ”“bash   “bash”;“bash
 ./bin/stop.sh   / bin / stop.sh
 ```
 
@@ -63,7 +63,7 @@ openclaw-office-next/   openclaw 办公套件 Next 版/openclaw-office-next/ Ope
    ' ' '
 ```
 {
-  "server": {   "server": {
+  "server": {   "server": {"server": {   "server": {
     "port": 3001,           // 图片服务器端口
     "host": "localhost"     // 图片服务器主机" host" : " localhost"     // Image server host
   },
