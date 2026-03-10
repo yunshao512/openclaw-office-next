@@ -1,0 +1,25 @@
+{
+  "server": {
+    "port": 3001,
+    "host": "localhost"
+  },
+  "frontend": {
+    "port": 8088,
+    "host": "0.0.0.0"
+  },
+  "openclaw": {
+    "gatewayUrl": "http://127.0.0.1:8089",
+    "pollInterval": 3000,
+    "reconnectInterval": 5000,
+    "logDir": "/tmp/openclaw",
+    "logPollInterval": 600000
+  },
+  "logging": {
+    "level": "info",
+    "dir": "./logs"
+  },
+  "storage": {
+    "agentsDir": "./public/agents",
+    "avatarsDir": "./public/avatars"
+  }
+}
