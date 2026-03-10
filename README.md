@@ -1,22 +1,26 @@
-# React + TypeScript + Vite
+# 效果展示
+<img width="2860" height="1504" alt="182ba369-eb94-4667-93ff-dbed678a7ee9" src="https://github.com/user-attachments/assets/e2d6f370-3d19-497d-8342-01b9aef181db" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# React + TypeScript + Vite# React  TypeScript  Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.此模板提供了一个最小化设置，用于在 Vite 中让 React 正常运行，并启用热模块替换（HMR）以及一些 ESLint 规则。
+
+Currently, two official plugins are available:目前有两个官方插件可用：
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## React Compiler   React编译器
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation   这个文档](https://react.dev/learn/react-compiler/installation).
 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
 ```js
-export default defineConfig([
+export default defineConfig([导出默认的配置定义：[
   globalIgnores(['dist']),
   {
     files: ['**/*.{ts,tsx}'],
@@ -30,7 +34,7 @@ export default defineConfig([
       // Optionally, add this for stylistic rules
       tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
+      // Other configs...   //其他配置…
     ],
     languageOptions: {
       parserOptions: {
@@ -54,8 +58,8 @@ export default defineConfig([
   globalIgnores(['dist']),
   {
     files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+    extends: [   扩展了:(
+      // Other configs...   //其他配置…
       // Enable lint rules for React
       reactX.configs['recommended-typescript'],
       // Enable lint rules for React DOM
@@ -66,7 +70,7 @@ export default defineConfig([
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
+      // other options...   //其他选项…
     },
   },
 ])
